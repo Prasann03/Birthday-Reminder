@@ -1,6 +1,12 @@
+Flask==2.3.3
+Flask-Login==0.6.3
+Flask-Mail==0.9.1
+gunicorn==23.0.0
+SQLAlchemy==2.0.30
+email-validator==2.1.1
 distlib==0.3.9
 filelock==3.18.0
-gunicorn==23.0.0
-packaging==25.0
 platformdirs==4.3.8
 virtualenv==20.31.2
+packaging==25.0
+flask_sqlalchemy==3.1.1
