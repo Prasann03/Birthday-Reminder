@@ -70,7 +70,7 @@ def init_db():
     # Check if admin user already exists
     existing = User.query.filter_by(username='admin').first()
     if not existing:
-        admin = User(username='admin', password_hash=generate_password_hash('admin1234'))
+        admin = User(username='admin', password_hash=generate_password_hash('admin123'))
         db.session.add(admin)
         db.session.commit()
         return 'Database initialized and admin user created.'
