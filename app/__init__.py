@@ -14,4 +14,8 @@ login = LoginManager(app)
 login.login_view = 'login'
 mail = Mail(app) 
 
+app.config.from_object(Config)
+# and in Config.py
+SECRET_KEY = 'you-will-never-guess'  # ✅ Must be set
+
 from app import routes ,models

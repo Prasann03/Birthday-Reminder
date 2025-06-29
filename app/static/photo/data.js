@@ -3,15 +3,15 @@ var data = [];
 var dataStr = "mix1<br><br>Photographer Mix<br><br><br>\
 mix2<br><br>Sleeping Mix<br><br><br>\
 mix3<br><br>Model Mix<br><br><br>\
-mix4<br><br>Angry Mix<br><br><br>\
+mix4<br><br>Trekking Mix<br><br><br>\
 mix5<br><br>Happy Mix<br><br><br>\
 mix6<br><br>Pretty Mix<br><br><br>\
 mix7<br><br>Gangster Mix<br><br><br>\
 mix8<br><br>Sunflower Mix<br><br><br>\
 mix9<br><br>Wow Mix<br><br><br>\
-mix10<br><br>Scary Mix<br><br><br>\
-mix11<br><br>Rajnikanth Mix<br><br><br>\
-mix12<br><br>Fat Mix<br><br><br>";
+mix10<br><br>surili akhiyon wale Mix<br><br><br>\
+mix11<br><br>confused ? thinking? Mix<br><br><br>\
+mix12<br><br>Rajnikanth Mix<br><br><br>";
 
 var wishes = [
   "May this year bring you as much joy as you bring to others every day!",
