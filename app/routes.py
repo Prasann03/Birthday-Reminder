@@ -13,6 +13,23 @@ def index():  # ✅ Public route
     print("Current user:", current_user)
     return render_template("index.html")
 
+@app.route('/init-db')
+def init_db():
+    db.create_all()
+
+    # Check if admin user already exists
+    existing = User.query.filter_by(username='admin').first()
+    if not existing:
+        admin = User(username='admin', password_hash=generate_password_hash('admin123'))
+        db.session.add(admin)
+    else:
+      existing.password_hash = generate_password_hash('admin123')
+
+    db.session.commit()
+
+    return 'Database initialized and admin user created.'
+    return 'Admin user already exists.'
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -63,15 +80,3 @@ def sendMail():
     return ('', 204)
 
 
-@app.route('/init-db')
-def init_db():
-    db.create_all()
-
-    # Check if admin user already exists
-    existing = User.query.filter_by(username='admin').first()
-    if not existing:
-        admin = User(username='admin', password_hash=generate_password_hash('admin123'))
-        db.session.add(admin)
-        db.session.commit()
-        return 'Database initialized and admin user created.'
-    return 'Admin user already exists.'
