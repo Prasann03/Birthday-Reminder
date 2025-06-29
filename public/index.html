@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Surprise</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
+</head>
+<body>
+
+<div id="fullpage">
+  <div class="section">
+    <div id="wrap">
+      <div class="photo photo_center" id="photo_{{index}}">
+        <img src="{{img}}" />
+        <div class="caption">{{caption}}</div>
+        <div class="desc">{{desc}}</div>
+      </div>
+    </div>
+    <a href="#" id="giftLink">Click for Surprise</a>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+  // Sample photo data
+  var data = [
+    { img: "images/photo1.jpg", caption: "Happy Moment 1", desc: "A beautiful memory." },
+    { img: "images/photo2.jpg", caption: "Happy Moment 2", desc: "Another sweet memory." }
+    // Add more photos as needed
+  ];
+</script>
+
+<script src="main.js"></script>
+
+</body>
+</html>

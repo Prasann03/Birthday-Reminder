@@ -31,7 +31,13 @@ def login():
 @app.route('/main')
 @login_required
 def main():
-    return render_template("main.html")
+    photo_data = [
+        {"img": "mix1.jpg", "caption": "Photographer Mix", "desc": "You make life more creative."},
+        {"img": "mix2.jpg", "caption": "Sleeping Mix", "desc": "May all your dreams be sweet."},
+        {"img": "mix3.jpg", "caption": "Model Mix", "desc": "You shine brighter than any lens could capture."},
+        # ... add all 12 like above
+    ]
+    return render_template("main.html", photos=photo_data)
 
 @app.route('/logout')
 def logout():

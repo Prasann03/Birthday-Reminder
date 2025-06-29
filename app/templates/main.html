@@ -1,19 +1,19 @@
 {% extends "base.html" %} {% block content %}
 
 <div class="mainPage" id="fullpage">
-    <div class="first section">
+     <div class="first section">
         <div class="wrap" id="wrap">
             <div class="photo photo_front" id="{% raw %}photo_{{index}}{% endraw %}" onclick="turn(this)">
                 <div class="photo-wrap">
                     <div class="side side-front">
                         <p class="image">
-                            <img id="img" src="../static/photo/{% raw %}{{img}}{% endraw %}">
+                            <img id="img" src="{% raw %}{{img}}{% endraw %}">
                         </p>
-                        <p class="caption">{% raw %}{{caption}}{% endraw %}</p>
+                        <p class="caption">{% raw %}{{ photo.caption }}{% endraw %}</p>
                         
                     </div>
                     <div class="side side-back">
-                        <p class="desc">{% raw %}{{desc}}{% endraw %}</p>
+                        <p class="desc">{% raw %}{{ photo.desc }}{% endraw %}</p>
                     </div>
                 </div>
             </div>
@@ -25,18 +25,21 @@
         <img src="{{ url_for('static',filename='image/3.png') }}" alt="thirdHero" class="heroImages" id="heroImage3">
         <div id="message1" class="messageCard">
             <p id="messageContent">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet modi, voluptatum dicta quae minima optio adipisci ab eaque sint aliquam iure, molestiae soluta rem! Placeat neque saepe commodi quasi hic!
+    Wishing you a life full of health, happiness, and peace. You deserve every good thing the universe can offer—just like the joy you bring to others, especially me.
             </p>
+
         </div>
         <div id="message2" class="messageCard">
             <p id="messageContent">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolor accusantium quas praesentium corrupti suscipit provident velit, fugit molestias aspernatur nostrum qui laboriosam quibusdam iure tempore dolore. Mollitia, itaque sapiente.
+    May you conquer every dream and achieve everything your heart is set on. Your strength and determination inspire me more than words can ever say.
             </p>
+
         </div>
         <div id="message3" class="messageCard">
-            <p id="messageContent">
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet impedit porro nobis numquam sequi atque neque assumenda cumque dolorem eos, ipsa facere commodi hic eligendi sed maiores aperiam delectus fugiat.
+           <p id="messageContent">
+    Thank you for being by my side, for the laughter, the memories, and even the wildest adventures—remember getting lost in the forest? I cherish every moment we've shared.
             </p>
+
         </div>
     </div>
 
@@ -45,26 +48,25 @@
         <img src="{{ url_for('static',filename='image/4.png') }}" alt="fifthHero" class="heroImages" id="heroImage2">
         <img src="{{ url_for('static',filename='image/1.png') }}" alt="sixthHero" class="heroImages" id="heroImage3">
         <div id="message1" class="messageCard">
-            <p id="messageContent">
-                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias quasi unde illo sint perferendis eveniet adipisci suscipit ratione sequi est quibusdam provident harum, ipsum doloremque beatae sit minima sed tempore.
-            </p>
+           <p id="messageContent">
+    You’re not just a part of my life—you’ve shaped so much of it. Your care, your presence, even your anger—it's all been real, and beautiful, and unforgettable.
+  </p>
         </div>
         <div id="message2" class="messageCard">
-            <p id="messageContent">
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, vero beatae consequatur voluptatem possimus deserunt necessitatibus qui aliquam maxime ratione quam itaque quae quod officia, laboriosam esse at dolores tempore?
-            </p>
+           <p id="messageContent">
+    Life with you has been an adventure—those unplanned walks, goofy laughs, endless talks. I’ll always be thankful for each of them, and for you.
+  </p>
         </div>
         <div id="message3" class="messageCard">
-            <p id="messageContent">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae dolores magni eos consequatur tempore amet, odit excepturi quibusdam suscipit in totam assumenda, deleniti porro provident quis optio? Consectetur, facilis ad?
-            </p>
+             <p id="messageContent">
+    You’ve made me feel seen, understood, and cared for like no one else. On your special day, I just hope you feel as special and loved as you truly are.
+  </p>
         </div>
     </div>
     <div class="fourth section">
         <div id="leftInfo">
-            <p id="wordmapText">The image that you see on the right has been developed using Machine Learning.
-                It used our text data over the past few weeks. The words that appear bigger and brighter, have been used more 
-                frequently than others.</p>
+           <p id="wordmapText">The image on the right reflects something more beautiful than data—our bond. Every word represents moments we’ve shared, the laughter, the care, the fights, the love, and everything that made our journey unforgettable.</p>
+
         </div>
         <div id="rightImage">
                 <img  src="{{ url_for('static',filename='image/test.png') }}" alt="Word Cloud" id="wordCloud" data-title="Image Caption" 3 data-group="single"  class="js-lightBox">
