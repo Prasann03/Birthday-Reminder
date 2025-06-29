@@ -10,3 +10,5 @@ platformdirs==4.3.8
 virtualenv==20.31.2
 packaging==25.0
 flask_sqlalchemy==3.1.1
+Flask-Migrate==4.0.5
+
