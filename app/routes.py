@@ -4,6 +4,8 @@ from app.forms import LoginForm
 from flask_login import current_user, login_user , logout_user, login_required
 from app.models import User
 from config import Config
+from werkzeug.security import generate_password_hash
+from app.models import db, User
 from flask_mail import Mail, Message
 
 @app.route('/')
@@ -51,3 +53,16 @@ def sendMail():
     msg.body = "Mail content"
     mail.send(msg)
     return  ('', 204)
+
+@app.route('/init-db')
+def init_db():
+    db.create_all()
+
+    # Check if admin user already exists
+    existing = User.query.filter_by(username='admin').first()
+    if not existing:
+        admin = User(username='admin', password_hash=generate_password_hash('admin123'))
+        db.session.add(admin)
+        db.session.commit()
+        return 'Database initialized and admin user created.'
+    return 'Admin user already exists.'
